@@ -40,7 +40,7 @@
 
 <section id="about" class="about">
     <div class="about-container">
-        <img src="Arthur.PNG" alt="">
+        <img src="img/Arthur.PNG" alt="">
           
             <div class="info-box"> 
 
@@ -48,31 +48,24 @@
                     <h3>Olá, eu sou</h3>
             <h1>Arthur Vinícius</h1>
             <span>Frontend Developer</span>
-            <h3>Sou estudante de Análise e Desenvolvimento de Sistemas (ADS), apaixonado por tecnologia e inovação. Tenho interesse em desenvolvimento de software, programação, banco de dados, redes de computadores e cibersegurança.
-
-Possuo experiência profissional na área industrial e de marcenaria, o que contribuiu para desenvolver habilidades como responsabilidade, organização, raciocínio lógico, resolução de problemas e trabalho em equipe.
-
-Gosto de aprender continuamente, explorar novas tecnologias e transformar ideias em projetos e soluções práticas. Atualmente, busco aprimorar minhas habilidades técnicas, desenvolver meu portfólio e conquistar oportunidades para crescer profissionalmente na área de Tecnologia da Informação.</h3>
+            <p>Estudante de ADS focado em desenvolvimento de software, programação, banco de dados, redes e cibersegurança. Com vivência nas áreas industrial e de marcenaria, trago organização, raciocínio lógico, resolução de problemas e trabalho em equipe para transformar ideias em projetos práticos e evoluir na área de TI.</p>
         </div>
-            <div class="btn-group"> 
-            <div class="btn">Dowload CV</div>
-            <div class="btn">Contato </div>
-             </div>
+            <div class="btn-group">
+    <div class="btn">Dowload CV</div>
+    <a href="https://wa.me/5541996571080?text=Ol%C3%A1%20Arthur%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" rel="noopener noreferrer" class="btn">Contato</a>
+</div>
+
             <div class="social">
                 <a href="https://github.com/7thur" target="_blank"> <i class="fa-brands fa-github"> </i> </a>
 
                 <a href="https://www.linkedin.com/in/arthurviniciusmartins/" target="_blank"> <i class="fa-brands fa-square-linkedin"> </i> </a>
             </div>
-        
         </div>
-        
-        
-        
     </div>
 </section>
 
 <section id="experience" class="experience">
-            <h2 class="section-title">Experiencias</h2>
+            <h2 class="section-title">experiência</h2>
 
             <div class="experience-info">
                 
@@ -130,65 +123,85 @@ Gosto de aprender continuamente, explorar novas tecnologias e transformar ideias
     <h2 class="section-title">Projetos</h2>
 
     <div class="project-grid">
+        <!-- CARD 1: ESTOQUE INTELIGENTE -->
         <div class="project-card">
-            <img src="estoque-inteligente.png" alt="Estoque Inteligente">
-            <h3>Estoque Inteligente</h3>
-            <p>Sistema web inteligente para gestão de estoque e vendas. Possui login seguro, dashboard financeiro em tempo real, alertas automatizados para reposição de produtos com baixo estoque e detecção de mercadorias encalhadas. Feito em HTML, CSS e JS.</p>
+            <input type="radio" name="slider-estoque" id="est-1" checked>
+            <input type="radio" name="slider-estoque" id="est-2">
+            <input type="radio" name="slider-estoque" id="est-3">
+
+            <img src="img/chat.png" alt="Estoque Inteligente 1" class="slide-img img-1">
+            <img src="img/opcoes.png" alt="Estoque Inteligente 2" class="slide-img img-2">
+            <img src="img/tela-login.png" alt="Estoque Inteligente 3" class="slide-img img-3">
+
+            <div class="slider-dots">
+                <label for="est-1"></label>
+                <label for="est-2"></label>
+                <label for="est-3"></label>
+            </div>
+
+            <h3>Chat em Tempo Real</h3>
+            <p>junto com o aplicativo de chat responsivo construído com layout flexbox, manipulação dinâmica do DOM via JavaScript e navegação SPA na mesma pagina, coloquei um Sistema de autenticação para acesso ao painel administrativo. Feito em HTML, CSS e JS.</p>
             <div class="btn-group">
-                <a href="https://minhaloja-estoque.netlify.app/" target="_blank" class="btn">Live Demo</a>
-                <a href="https://github.com/7thur/Estoque-inteligente" target="_blank" class="btn"> Ver Código </a>
+                <a href="#" target="_blank" class="btn">Live Demo</a>
+                <a href="https://github.com/7thur/projeto-android" target="_blank" class="btn">Ver Código</a>
             </div>
-            </div>
-            <div class="project-card"> 
-            <img src="tela-login.png" alt="Projeto 2">
-            <h3>Tela de Login</h3>
-            <p>Sistema de autenticação para acesso ao painel administrativo. Feito em HTML, CSS e JS.</p>
+        </div>
+
+        <!-- CARD 2: TELA DE LOGIN -->
+        <div class="project-card">
+    <input type="radio" name="slider-login" id="login-1" checked>
+    <input type="radio" name="slider-login" id="login-2">
+    <input type="radio" name="slider-login" id="login-3">
+    <input type="radio" name="slider-login" id="login-4">
+    <input type="radio" name="slider-login" id="login-5">
+
+    <img src="img/cadastrominhaloja.png" alt="Tela de Login 1" class="slide-img img-1">
+    <img src="img/entrarminhaloja.png" alt="Tela de Login 2" class="slide-img img-2">
+    <img src="img/estoque.png" alt="Tela de Login 3" class="slide-img img-3">
+    <img src="img/estoqueb.png" alt="Tela de Login 4" class="slide-img img-4">
+    <img src="img/estoquec.png" alt="Tela de Login 5" class="slide-img img-5">
+
+    <div class="slider-dots">
+        <label for="login-1"></label>
+        <label for="login-2"></label>
+        <label for="login-3"></label>
+        <label for="login-4"></label>
+        <label for="login-5"></label>
+    </div>
+
+            <h3>Estoque inteligente</h3>
+            <p>Sistema web inteligente para gestão de estoque e vendas. Possui login seguro, dashboard financeiro em tempo real, alertas automatizados para reposição de produtos com baixo estoque e detecção de mercadorias encalhadas. Feito em HTML, CSS e JS.    </p>
             <div class="btn-group">
                 <a href="#" target="_blank" class="btn">Live Demo</a>
                 <a href="https://github.com/pctechservice/Login-system" target="_blank" class="btn">Ver Código</a>
             </div>
+        </div>
+
+        <!-- CARD 3: CHAT EM TEMPO REAL -->
+        <div class="project-card">
+            <input type="radio" name="slider-chat" id="chat-1" checked>
+            <input type="radio" name="slider-chat" id="chat-2">
+            <input type="radio" name="slider-chat" id="chat-3">
+
+            <img src="#" alt="Chat em Tempo Real 1" class="slide-img img-1">
+            <img src="#" alt="Chat em Tempo Real 2" class="slide-img img-2">
+            <img src="#" alt="Chat em Tempo Real 3" class="slide-img img-3">
+
+            <div class="slider-dots">
+                <label for="chat-1"></label>
+                <label for="chat-2"></label>
+                <label for="chat-3"></label>
             </div>
 
-            <div class="project-card">
-            <img src="chat.png" alt="Projeto 3">
             <h3>Chat em Tempo Real</h3>
             <p>Um aplicativo de chat responsivo construído com layout flexbox, manipulação dinâmica do DOM via JavaScript e navegação SPA na mesma página.</p>
             <div class="btn-group">
                 <a href="#" target="_blank" class="btn">Live Demo</a>
-                <a href="https://github.com/pctechservice/Chat-system" target="_blank" class="btn">Ver Código</a>
+                <a href="#" target="_blank" class="btn">Ver Código</a>
             </div>
         </div>
-
     </div>
-    
 </section>
-
-<section id="contact" class="contato">
-
-<h2 class="section-title">Contato</h2>
-<div class="contact-form">
-    <form action="#" method="post">
-        <input type="email" name="email" placeholder="Email" required>
-        <button type="submit" class="btn">Enviar</button>
-        </form>
-    </div>
-</section> 
-    <nav> 
-    <ul class="footer-links">
-        <li>
-            <a href="#about">Sobre</a>
-        </li>
-        <li>
-            <a href="#experience">Expêriencia</a>
-        </li>
-        <li>
-            <a href="#project">Projeto</a>
-        </li>
-        <li>
-            <a href="#contact">Contato</a>
-        </li>   
-    </ul>
-    </nav>
 
     <section class="copyright">
         <p>© 2026 Arthur Vinícius | Todos os direitos reservados.</p>

@@ -23,6 +23,8 @@ header {
     border-radius: 3rem;
     z-index: 1000;
 }
+
+
 .logo {
     color: white;
     font-size: 1.3rem;
@@ -86,11 +88,22 @@ li a:hover::before{
 }
 
 section{
-    min-height: 100vh;
-    padding: 8rem 12%;
-    width: 100% ;
+    min-height: auto;
+    padding: 4rem 12%;
+    width: 100%;
     position: relative;
 }
+
+.about {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+}
+
+section:last-of-type,
+#copyright {
+    padding-bottom: 3rem;
+}
+
 .about .about-container{
  display: flex;
  align-items: center;
@@ -137,6 +150,8 @@ background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
     font-weight: 500;
     text-wrap: nowrap;
     transition: 0.2s ease-in-out;
+    text-decoration: none;
+    color: black;
 }
 .btn:hover{
     background-color: black;
@@ -275,197 +290,60 @@ background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
     gap: 5rem;
 }
 
-.contact-form input{
-    border-radius: 3rem;
-    padding: 0.5rem 1.5rem;
-    border: 2px solid black;
-    padding: 1rem 1;
-    font-size: 3.5rem;
-    
-}
-
-.contact-form form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-#contact{
-    min-height: 100vh;  
-    padding-bottom: 1rem;  
-}
-
-.footer-links
-{
-    display: flex;
-    gap: 2rem
-}
-
-.footer-links li a{
-    color: white;
-}
-
-nav{
-    position: relative;
-    top: -7rem;
-    margin: 0 auto;
-    width: fit-content;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    background-color: rgba(18, 18, 18, 0.3);
-    backdrop-filter: blur(8px);
-    color: rgb(246, 243, 243);
-    padding: 0.3rem 1rem;
-    border-radius: 3rem;
-    z-index: 1000;
-    align-items: center;
-    margin-top: -4rem;
-}
-
-.footer-links li a{
-    position: relative;
-    padding-bottom: 0.5rem;
-    display: inline-block;
-    color: white;
-}
-
-.footer-links li a::before{
-    position: absolute;
-    content: '';
-    width: 0;
-    left: 0;
-    bottom: 0%;
-    height: 5px;
-    border-radius: 1rem;
-    transition: 0.3s ease-in-out;
-    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
-}
-
-.footer-links li a:hover::before{
-    width: 100%;
-}
-
-nav li a{
-    position: relative;
-    padding-bottom: 0.5rem;
-    display: inline-block;
-    color: rgb(246, 243, 243);
-}
-
-nav li a::before{
-    position: absolute;
-    content: '';
-    width: 0;
-    left: 0;
-    bottom: 0%;
-    height: 5px;
-    border-radius: 1rem;
-    transition: 0.3s ease-in-out;
-    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
-}
-
-nav li a:hover::before{
-    width: 100%;
-}
-
-.copyright{
-    position: relative;
-    top: -26rem;
-    margin: 1.5rem auto 0;
-    width: fit-content;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10rem;
-    color: rgb(22, 21, 21); 
-}
-
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  header {
-    width: 90%;
-    gap: 1rem;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-  }
-
-  .logo {
-    font-size: 1rem;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 4rem;
-    right: 2rem;
-    background-color: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  #menu-icon {
-    display: block;
-  }
-
-  .visitar-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .about .about-container,
-  .experience-info,
-  .project .projects-container {
-    flex-direction: column;
-    gap: 3rem;
-    text-align: center;
-  }
-
-  .about img {
-    width: 50vw;
-    max-width: 250px;
-  }
-
-  .experience img {
-    width: 60vw;
-    max-width: 300px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form input {
-    font-size: 1.2rem;
-    width: 100%;
-  }
-
-  .footer-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
   .copyright {
     margin-top: 1rem;
     text-align: center;
     padding: 0 1rem;
   }
+
+/* Esconde os botões de rádio e as imagens inativas */
+.project-card input[type="radio"],
+.project-card .slide-img {
+    display: none;
+}
+
+/* Tamanho padrão da imagem nos 3 cards */
+.project-card .slide-img {
+    width: 100%;
+    max-width: 300px;
+        margin: 0 auto;
+    border-radius: 1rem;
+}
+
+/* Mostra a foto da aba clicada em qualquer um dos 3 cards */
+.project-card input[id$="-1"]:checked ~ .img-1,
+.project-card input[id$="-2"]:checked ~ .img-2,
+.project-card input[id$="-3"]:checked ~ .img-3,
+.project-card input[id$="-4"]:checked ~ .img-4,
+.project-card input[id$="-5"]:checked ~ .img-5 {
+    display: block;
+}
+
+/* Bolinhas (abas) abaixo da imagem */
+.slider-dots {        display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.slider-dots label {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.slider-dots label:hover {
+    transform: scale(1.2);
+}
+
+/* Destaca a bolinha ativa com o gradiente */
+.project-card input[id$="-1"]:checked ~ .slider-dots label[for$="-1"],
+.project-card input[id$="-2"]:checked ~ .slider-dots label[for$="-2"],
+.project-card input[id$="-3"]:checked ~ .slider-dots label[for$="-3"],
+.project-card input[id$="-4"]:checked ~ .slider-dots label[for$="-4"],
+.project-card input[id$="-5"]:checked ~ .slider-dots label[for$="-5"] {
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    transform: scale(1.25);
 }
