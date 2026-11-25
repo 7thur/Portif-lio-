@@ -105,16 +105,21 @@ section:last-of-type,
 }
 
 .about .about-container{
- display: flex;
- align-items: center;
- justify-content:center;
- gap: 10rem;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2rem, 8vw, 10rem);
 }
 .about img{
-    width: 20vw;
+     width: clamp(180px, 22vw, 320px);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 100%;
 
 }
+
+
+
 .info-box{
     display: flex;
     flex-direction: column;
@@ -138,6 +143,15 @@ background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
     color: transparent;
     font-size: 2rem;
 }
+
+.info-box h1{
+     font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.info-box p{
+    max-width: 60ch;
+}
+
 .btn-group{
     display: flex;
     gap: 1rem;
@@ -166,7 +180,7 @@ background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
 .social i{
     font-size: 2.5rem;
     cursor: pointer;
-    transition: 0.2 ease-in-out;
+    transition: 0.2s ease-in-out;
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
     -webkit-background-clip: text;
     background-clip: text;
@@ -180,20 +194,21 @@ background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
 
 .section-title{
     text-align: center;
-    font-size: 4rem;
+    font-size: clamp(2rem, 6vw, 4rem);
     font-weight: 600;
     margin-bottom: 3rem;
 }
 
 .experience-info {
-    display: flex;
-    align-items: center; 
+     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 5rem;
+    gap: clamp(2rem, 5vw, 5rem);
 }
 
 .experience img {
-    width: 20vw;
+     width: clamp(160px, 20vw, 300px);
+    max-width: 100%;
     border-radius: 3rem;
 
 }
@@ -209,7 +224,7 @@ background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
     border-radius: 3rem;
     display: flex;
     flex-direction: column;
-    align-items: base-line;
+    align-items: flex-start;
     justify-content: left;
     cursor: pointer;
     transition: 0.2s ease-in-out;
@@ -247,8 +262,8 @@ background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
 }
 
 .project-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 2rem;
 }
 .project-card{
@@ -346,4 +361,313 @@ background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
 .project-card input[id$="-5"]:checked ~ .slider-dots label[for$="-5"] {
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
     transform: scale(1.25);
+}
+
+/* ================= CONTATO ================= */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    padding: 1.5rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+    color: black;
+    transition: 0.2s ease-in-out;
+}
+
+.contact-card i {
+    font-size: 1.8rem;
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.contact-card span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.contact-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    overflow-wrap: anywhere;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    background: black;
+    color: white;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+}
+
+.contact-form label {
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    font-size: 1rem;
+    outline: none;
+    resize: vertical;
+    transition: 0.2s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: rgb(0, 157, 255);
+    box-shadow: 0 0 0 3px rgba(0, 157, 255, 0.2);
+}
+
+.contact-btn {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    background: transparent;
+    border-color: black;
+    font-size: 1rem;
+}
+
+.contact-hp {
+    display: none;
+}
+
+.contact-status {
+    min-height: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.contact-status.ok {
+    color: #2e7d32;
+}
+
+.contact-status.erro {
+    color: #d9363e;
+}
+
+/* ================= RESPONSIVO ================= */
+
+/* item do GitHub no menu: só aparece no celular */
+.nav-links .nav-mobile-btn {
+    display: none;
+}
+
+/* ----- NOTEBOOKS PEQUENOS (até 1200px) ----- */
+@media (max-width: 1200px) {
+    section {
+        padding: 4rem 8%;
+    }
+
+    header {
+        gap: 3rem;
+    }
+}
+
+/* ----- TABLETS (até 900px) ----- */
+@media (max-width: 900px) {
+    header {
+        width: calc(100% - 2rem);
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .visitar-btn {
+        display: none;
+    }
+
+    /* menu vira uma lista que abre embaixo do header */
+    .nav-links {
+        position: absolute;
+        top: calc(100% + 0.6rem);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0.5rem 1.5rem 1rem;
+        background: rgba(14, 13, 13, 0.92);
+        backdrop-filter: blur(8px);
+        border-radius: 1.5rem;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    }
+
+    .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 0.9rem 0;
+    }
+
+    .nav-links .nav-mobile-btn {
+        display: block;
+    }
+
+    /* seções empilham em coluna */
+    .about .about-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .experience-info {
+        flex-direction: column;
+    }
+
+    .experience img {
+        width: min(60vw, 280px);
+    }
+}
+
+/* ----- CELULARES (até 600px) ----- */
+@media (max-width: 600px) {
+    section {
+        padding: 3rem 1.25rem;
+    }
+
+    .about {
+        padding-top: 7rem;
+    }
+
+    .about img {
+        width: min(55vw, 220px);
+    }
+
+    .info-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .info-box span {
+        font-size: 1.5rem;
+    }
+
+    .btn-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .grid-card,
+    .project-card {
+        padding: 1.5rem 1.25rem;
+        border-radius: 1.5rem;
+    }
+
+    .project-grid {
+        gap: 1.25rem;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+}
+
+/* ----- CELULARES PEQUENOS (até 380px) ----- */
+@media (max-width: 380px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1.2rem;
+    }
+}
+
+/* ----- TELAS DE TOQUE: sem o "pulo" do hover que gruda ao tocar ----- */
+@media (hover: none) {
+    .project-card:hover,
+    .grid-card:hover {
+        transform: none;
+    }
+}
+
+/* ----- responsivo da seção de contato ----- */
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contact-card {
+        border-radius: 1.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem 1.25rem;
+        border-radius: 1.5rem;
+    }
+
+    .contact-btn {
+        align-self: stretch;
+        text-align: center;
+    }
+}
+
+@media (hover: none) {
+    .contact-card:hover {
+        transform: none;
+    }
 }

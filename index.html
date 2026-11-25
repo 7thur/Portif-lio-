@@ -14,33 +14,28 @@
 </head>
 <body>
     
-    <header class="header"> 
-       <a href="#" class="logo"><span>Arthur Vinícius</span></a>
+    <header class="header">
+    <a href="#" class="logo"><span>Arthur Vinícius</span></a>
 
-       <ul class="nav-links">
-        <li>
-            <a href="#about">Sobre</a>
+    <ul class="nav-links">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#experience">Experiencias</a></li>
+        <li><a href="#project">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
+        <li class="nav-mobile-btn">
+            <a href="https://github.com/7thur" target="_blank">GitHub</a>
         </li>
-        <li>
-            <a href="#experience">Experiencias</a>
-        </li>
-        <li>
-            <a href="#project">Projetos</a>
-        </li>
-        <li>
-            <a href="#contact">Contato</a>
-        </li> 
-        </ul>
+    </ul>
 
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <i class="fa-solid fa-bars" id="menu-icon" role="button" tabindex="0" aria-label="Abrir menu" aria-expanded="false"></i>
 
-        <a class="visitar-btn" href="https://github.com/7thur" target="_blank">Visitar github</a>
-    </header>
+    <a class="visitar-btn" href="https://github.com/7thur" target="_blank">Visitar github</a>
+</header>
 
 
 <section id="about" class="about">
     <div class="about-container">
-        <img src="img/Arthur.PNG" alt="">
+        <img src="img/Arthur.PNG" alt="img">
           
             <div class="info-box"> 
 
@@ -94,27 +89,26 @@
                     <div class="grid-card">
                         <i class="fa-solid fa-laptop"></i>
                         <span>Integração de APIs e Recursos Externos</span>
-                        <h3>  </h3>
+                        
                         <p> Compreensão do fluxo de Deploy e publicação de código através de servidores de arquivos estáticos na nuvem (como GitHub Pages, Vercel ou Netlify), gerando links públicos globais (Live Demos).</p>  
                     </div>
 
                      <div class="grid-card">
                         <i class="fa-solid fa-laptop"></i>
                         <span>Controle de Versão com Git</span>
-                        <h3>  </h3>
+                        <h3> </h3>
                         <p>Inicialização de repositórios (git init), gerenciamento de histórico de salvamento (git add, git commit) e controle de ramificações (git branch -M main).</p>
                     </div>
 
                      <div class="grid-card">
                         <i class="fa-solid fa-laptop"></i>
                         <span>Trabalho Corporativo no Github</span>
-                        <h3> git status
- </h3>
+
                         <p>Conexão com servidores remotos (git remote), envio de códigos (git push), download de atualizações de terceiros (git pull), sincronização de código (git fetch) e gerenciamento de permissões e colaborações (Forks, Pull Requests e resolução de conflitos/Merges).</p>
                     </div>
 
                 </div>
-<img src="Arthur.png" alt="">
+<img src="img/Arthur.png" alt="">
             </div>
             
 </section>
@@ -125,18 +119,25 @@
     <div class="project-grid">
         <!-- CARD 1: ESTOQUE INTELIGENTE -->
         <div class="project-card">
-            <input type="radio" name="slider-estoque" id="est-1" checked>
-            <input type="radio" name="slider-estoque" id="est-2">
-            <input type="radio" name="slider-estoque" id="est-3">
+            <input type="radio" name="slider-login" id="login-1" checked>
+            <input type="radio" name="slider-login" id="login-2">
+            <input type="radio" name="slider-login" id="login-3">
+            <input type="radio" name="slider-login" id="login-4">
+            <input type="radio" name="slider-login" id="login-5">
 
-            <img src="img/chat.png" alt="Estoque Inteligente 1" class="slide-img img-1">
-            <img src="img/opcoes.png" alt="Estoque Inteligente 2" class="slide-img img-2">
-            <img src="img/tela-login.png" alt="Estoque Inteligente 3" class="slide-img img-3">
+             <img src="img/tela-login.png" alt="Tela de Login 2" class="slide-img img-1">
+            <img src="img/telacadastro.png" alt="Tela de Login 1" class="slide-img img-2">
+            <img src="img/chat.png" alt="Tela de Login 3" class="slide-img img-3">
+            <img src="img/opcoes.png" alt="Tela de Login 4" class="slide-img img-4">
+            <img src="img/perfilchat.png" alt="Tela de Login 5" class="slide-img img-5">
+           
 
             <div class="slider-dots">
-                <label for="est-1"></label>
-                <label for="est-2"></label>
-                <label for="est-3"></label>
+                <label for="login-1"></label>
+                <label for="login-2"></label>
+                <label for="login-3"></label>
+                <label for="login-4"></label>
+                <label for="login-5"></label>
             </div>
 
             <h3>Chat em Tempo Real</h3>
@@ -147,26 +148,26 @@
             </div>
         </div>
 
-        <!-- CARD 2: TELA DE LOGIN -->
+        
         <div class="project-card">
-    <input type="radio" name="slider-login" id="login-1" checked>
-    <input type="radio" name="slider-login" id="login-2">
-    <input type="radio" name="slider-login" id="login-3">
-    <input type="radio" name="slider-login" id="login-4">
-    <input type="radio" name="slider-login" id="login-5">
+    <input type="radio" name="slider-estoque" id="est-1" checked>
+    <input type="radio" name="slider-estoque" id="est-2">
+    <input type="radio" name="slider-estoque" id="est-3">
+    <input type="radio" name="slider-estoque" id="est-4">
+    <input type="radio" name="slider-estoque" id="est-5">
 
-    <img src="img/cadastrominhaloja.png" alt="Tela de Login 1" class="slide-img img-1">
-    <img src="img/entrarminhaloja.png" alt="Tela de Login 2" class="slide-img img-2">
-    <img src="img/estoque.png" alt="Tela de Login 3" class="slide-img img-3">
-    <img src="img/estoqueb.png" alt="Tela de Login 4" class="slide-img img-4">
-    <img src="img/estoquec.png" alt="Tela de Login 5" class="slide-img img-5">
+    <img src="img/cadastrominhaloja.png" alt="Estoque Inteligente 1" class="slide-img img-1">
+    <img src="img/entrarminhaloja.png" alt="Estoque Inteligente 2" class="slide-img img-2">
+    <img src="img/estoque.png" alt="Estoque Inteligente 3" class="slide-img img-3">
+    <img src="img/estoqueb.png" alt="Estoque Inteligente 4" class="slide-img img-4">
+    <img src="img/estoquec.png" alt="Estoque Inteligente 5" class="slide-img img-5">
 
     <div class="slider-dots">
-        <label for="login-1"></label>
-        <label for="login-2"></label>
-        <label for="login-3"></label>
-        <label for="login-4"></label>
-        <label for="login-5"></label>
+        <label for="est-1"></label>
+        <label for="est-2"></label>
+        <label for="est-3"></label>
+        <label for="est-4"></label>
+        <label for="est-5"></label>
     </div>
 
             <h3>Estoque inteligente</h3>
@@ -203,8 +204,64 @@
     </div>
 </section>
 
+<section id="contact" class="contact">
+    <h2 class="section-title">Contato</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-cards">
+            <a href="https://wa.me/5541996571080?text=Ol%C3%A1%20Arthur%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp</span>
+                <p>Resposta mais rápida por aqui.</p>
+            </a>
+
+            <a href="https://www.linkedin.com/in/arthurviniciusmartins/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+                <p>Vamos nos conectar.</p>
+            </a>
+
+            <a href="https://github.com/7thur" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+                <p>Veja meus projetos e códigos.</p>
+            </a>
+
+            <a href="mailto:seuemail@exemplo.com" class="contact-card">
+                <i class="fa-solid fa-envelope"></i>
+                <span>E-mail</span>
+                <p>arthurggwar00@gmail.com</p>
+            </a>
+        </div>
+
+        <form class="contact-form" id="contactForm" name="contato" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contato">
+
+    <!-- campo escondido: robôs preenchem, pessoas não -->
+    <p class="contact-hp">
+        <label>Não preencha: <input name="bot-field"></label>
+    </p>
+
+    <label for="contactNome">Nome</label>
+    <input type="text" id="contactNome" name="nome" placeholder="Seu nome" required>
+
+    <label for="contactEmail">Seu e-mail</label>
+    <input type="email" id="contactEmail" name="email" placeholder="voce@empresa.com" required>
+
+    <label for="contactMensagem">Mensagem</label>
+    <textarea id="contactMensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+
+    <button type="submit" class="btn contact-btn">Enviar mensagem</button>
+    <p id="contactStatus" class="contact-status" role="status"></p>
+</form>
+
+    </div>
+</section>
+
     <section class="copyright">
         <p>© 2026 Arthur Vinícius | Todos os direitos reservados.</p>
+    </section>
 <script src="script.js"></script>
 </body>
 </html>
